@@ -22,7 +22,7 @@ struct ContentView: View {
                     } else if selectedTab == 2 {
                         consultarAnuncio()
                     } else {
-            
+                        ConfigurationView()
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
