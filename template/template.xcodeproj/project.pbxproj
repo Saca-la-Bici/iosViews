@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE88BAE22C89E8000076208C /* actividadesUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88BAE12C89E8000076208C /* actividadesUsuario.swift */; };
+		AE88BAE42C89EC2A0076208C /* rodadasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88BAE32C89EC2A0076208C /* rodadasView.swift */; };
+		AE88BAE62C89EC940076208C /* eventosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88BAE52C89EC940076208C /* eventosView.swift */; };
+		AE88BAE82C89ECA50076208C /* talleresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88BAE72C89ECA50076208C /* talleresView.swift */; };
+		AE88BAEA2C89EE7C0076208C /* activityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88BAE92C89EE7C0076208C /* activityCardView.swift */; };
+		AE88BAEC2C8A068F0076208C /* actividadesAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88BAEB2C8A068F0076208C /* actividadesAdmin.swift */; };
+		AE88BAEE2C8A06C40076208C /* activityCardAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88BAED2C8A06C40076208C /* activityCardAdminView.swift */; };
 		AEB91D032C877B810012591B /* templateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D022C877B810012591B /* templateApp.swift */; };
 		AEB91D052C877B810012591B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D042C877B810012591B /* ContentView.swift */; };
 		AEB91D072C877B810012591B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D062C877B810012591B /* Item.swift */; };
@@ -15,6 +22,7 @@
 		AEB91D162C877B830012591B /* templateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D152C877B830012591B /* templateTests.swift */; };
 		AEB91D202C877B830012591B /* templateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D1F2C877B830012591B /* templateUITests.swift */; };
 		AEB91D222C877B830012591B /* templateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D212C877B830012591B /* templateUITestsLaunchTests.swift */; };
+		AED11FB02C89106300A7CACF /* consultarAnuncio.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED11FAF2C89106300A7CACF /* consultarAnuncio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE88BAE12C89E8000076208C /* actividadesUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = actividadesUsuario.swift; sourceTree = "<group>"; };
+		AE88BAE32C89EC2A0076208C /* rodadasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rodadasView.swift; sourceTree = "<group>"; };
+		AE88BAE52C89EC940076208C /* eventosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventosView.swift; sourceTree = "<group>"; };
+		AE88BAE72C89ECA50076208C /* talleresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = talleresView.swift; sourceTree = "<group>"; };
+		AE88BAE92C89EE7C0076208C /* activityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activityCardView.swift; sourceTree = "<group>"; };
+		AE88BAEB2C8A068F0076208C /* actividadesAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = actividadesAdmin.swift; sourceTree = "<group>"; };
+		AE88BAED2C8A06C40076208C /* activityCardAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activityCardAdminView.swift; sourceTree = "<group>"; };
 		AEB91CFF2C877B810012591B /* template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB91D022C877B810012591B /* templateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = templateApp.swift; sourceTree = "<group>"; };
 		AEB91D042C877B810012591B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +61,7 @@
 		AEB91D1B2C877B830012591B /* templateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = templateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB91D1F2C877B830012591B /* templateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = templateUITests.swift; sourceTree = "<group>"; };
 		AEB91D212C877B830012591B /* templateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = templateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AED11FAF2C89106300A7CACF /* consultarAnuncio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = consultarAnuncio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +117,14 @@
 				AEB91D062C877B810012591B /* Item.swift */,
 				AEB91D082C877B830012591B /* Assets.xcassets */,
 				AEB91D0A2C877B830012591B /* Preview Content */,
+				AED11FAF2C89106300A7CACF /* consultarAnuncio.swift */,
+				AE88BAE12C89E8000076208C /* actividadesUsuario.swift */,
+				AE88BAED2C8A06C40076208C /* activityCardAdminView.swift */,
+				AE88BAE32C89EC2A0076208C /* rodadasView.swift */,
+				AE88BAE92C89EE7C0076208C /* activityCardView.swift */,
+				AE88BAE52C89EC940076208C /* eventosView.swift */,
+				AE88BAE72C89ECA50076208C /* talleresView.swift */,
+				AE88BAEB2C8A068F0076208C /* actividadesAdmin.swift */,
 			);
 			path = template;
 			sourceTree = "<group>";
@@ -260,9 +284,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE88BAE22C89E8000076208C /* actividadesUsuario.swift in Sources */,
+				AE88BAEA2C89EE7C0076208C /* activityCardView.swift in Sources */,
+				AE88BAE62C89EC940076208C /* eventosView.swift in Sources */,
+				AE88BAEE2C8A06C40076208C /* activityCardAdminView.swift in Sources */,
 				AEB91D052C877B810012591B /* ContentView.swift in Sources */,
+				AED11FB02C89106300A7CACF /* consultarAnuncio.swift in Sources */,
+				AE88BAE82C89ECA50076208C /* talleresView.swift in Sources */,
 				AEB91D072C877B810012591B /* Item.swift in Sources */,
 				AEB91D032C877B810012591B /* templateApp.swift in Sources */,
+				AE88BAE42C89EC2A0076208C /* rodadasView.swift in Sources */,
+				AE88BAEC2C8A068F0076208C /* actividadesAdmin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
