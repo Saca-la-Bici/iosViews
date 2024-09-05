@@ -29,7 +29,7 @@ jobs:
         run: |
           device=$(xcrun simctl list devices available | grep -oE 'iPhone [^ ]+' | head -1)
           if [ $scheme = default ]; then scheme=$(cat default); fi
-          xcodebuild build-for-testing -scheme "$scheme" -project template/template.xcodeproj -destination "platform=$platform,name=$device"
+          xcodebuild build-for-testing -scheme "$scheme" -project template/template.xcodeproj -destination "platform=$platform,name=$device" -allowProvisioningUpdates
 
       - name: Test
         env:
@@ -38,4 +38,4 @@ jobs:
         run: |
           device=$(xcrun simctl list devices available | grep -oE 'iPhone [^ ]+' | head -1)
           if [ $scheme = default ]; then scheme=$(cat default); fi
-          xcodebuild test-without-building -scheme "$scheme" -project template/template.xcodeproj -destination "platform=$platform,name=$device"
+          xcodebuild test-without-building -scheme "$scheme" -project template/template.xcodeproj -destination "platform=$platform,name=$device" -allowProvisioningUpdates
