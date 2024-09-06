@@ -8,29 +8,49 @@
 import SwiftUI
 
 struct ActividadIndividualTab: View {
-    @State private var selectedTab = 0
+    @State private var selectedTab = 1
+    @State private var comentario = ""
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-
+                
                 VStack {
                     if selectedTab == 0 {
-                        ActividadIndividualView()
+                        ActividadesView()
                     } else if selectedTab == 1 {
-                        
+                        ActividadIndividualView()
                     } else if selectedTab == 2 {
-                        
+                        consultarAnuncio()
                     } else {
-                        
+                        ConfigurationView()
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-
+                
+                if selectedTab == 1 {
+                    HStack {
+                        TextField("Escribe un comentario...", text: $comentario)
+                            .padding()
+                            .cornerRadius(10)
+                            .padding(.horizontal)
+                        
+                        Button(action: {
+                            // Acción para enviar el comentario
+                        }) {
+                            Image(systemName: "paperplane")
+                                .padding()
+                                .foregroundColor(.black)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        .padding(.trailing)
+                    }
+                }
+                
                 CustomFooterView(selectedTab: $selectedTab)
             }
             .navigationBarHidden(true)
         }
-
     }
 }
 
@@ -193,7 +213,31 @@ struct ActividadIndividualView: View {
                         Spacer()
                     }
                     .padding()
+                    
+                    HStack(spacing: 15) {
+                        Button(action: {
+                            
+                        }) {
+                            Image(systemName: "heart")
+                            Text("33")
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        Button(action: {
+                            
+                        }) {
+                            Image(systemName: "text.bubble")
+                            Text("10")
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                    .padding(.leading, 30)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
                 }
+                
+                Divider()
+                    .padding()
                 
                 Section {
                     HStack() {
@@ -219,6 +263,26 @@ struct ActividadIndividualView: View {
                         Spacer()
                     }
                     .padding()
+                    
+                    HStack(spacing: 15) {
+                        Button(action: {
+                            
+                        }) {
+                            Image(systemName: "heart")
+                            Text("5")
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        Button(action: {
+                            
+                        }) {
+                            Image(systemName: "text.bubble")
+                            Text("2")
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                    .padding(.leading, 30)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
         }
