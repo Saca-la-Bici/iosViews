@@ -18,7 +18,7 @@ struct ContentView: View {
                     if selectedTab == 0 {
                         ActividadesView()
                     } else if selectedTab == 1 {
-                        Text("Mapa")
+                        ActividadIndividualTab()
                     } else if selectedTab == 2 {
                         consultarAnuncio()
                     } else {
@@ -26,8 +26,10 @@ struct ContentView: View {
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-
-                CustomFooterView(selectedTab: $selectedTab)
+                
+                if selectedTab != 1 {
+                    CustomFooterView(selectedTab: $selectedTab)
+                }
             }
             .navigationBarHidden(true)
         }

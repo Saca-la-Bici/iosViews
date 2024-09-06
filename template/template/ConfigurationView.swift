@@ -10,21 +10,28 @@ import SwiftUI
 struct ConfigurationView: View {
     var body: some View {
         VStack(spacing: 0) {
-            HStack {
-                Button {
-                } label: {
-                    Image(systemName: "chevron.backward")
-                        .foregroundColor(Color(red: 193.0 / 255.0, green: 182.0 / 255.0, blue: 3.0 / 255.0))
+            ZStack {
+                HStack {
+                    Button(action: {
+                        
+                    }) {
+                        HStack {
+                            Image(systemName: "chevron.backward")
+                                .foregroundColor(Color(red: 193.0 / 255.0, green: 182.0 / 255.0, blue: 3.0 / 255.0))
+                        }
+                        .scaleEffect(1.5)
+                        .padding(.leading, 10)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    Spacer()
                 }
-                .scaleEffect(1.5)
-                .padding(.leading, 25)
-                Spacer()
+                .padding()
+                
                 Text("Configuración y Privacidad")
                     .font(.title3)
                     .bold()
-                Spacer()
             }
-            .padding(.vertical)
 
 
             ScrollView {
@@ -118,6 +125,7 @@ struct BotonSeccion: View {
                         .scaleEffect(1.5)
                 }
             }
+            .buttonStyle(PlainButtonStyle())
         }
         .padding(.vertical, 4)
     }
