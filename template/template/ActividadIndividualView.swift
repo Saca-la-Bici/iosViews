@@ -55,6 +55,7 @@ struct ActividadIndividualTab: View {
 }
 
 struct ActividadIndividualView: View {
+    @State private var isJoined = false
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -164,17 +165,18 @@ struct ActividadIndividualView: View {
                     .buttonStyle(PlainButtonStyle())
                     
                     Button(action: {
-                        
+                        // Alternar el estado del botón
+                        isJoined.toggle()
                     }){
                         HStack {
                             Image(systemName: "plus.circle")
-                            Text("Unirse")
+                            Text(isJoined ? "Cancelar" : "Unirse")
                                 .font(.headline)
                         }
                         .foregroundColor(.white)
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(Color.yellow)
+                        .background(isJoined ? Color.red : Color.yellow)
                         .cornerRadius(15)
                     }
                     .buttonStyle(PlainButtonStyle())
