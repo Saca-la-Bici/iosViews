@@ -136,6 +136,7 @@ struct ActivityCardAdminView: View {
                     .background(isJoined ? Color.red : Color(hex: "#88B598"))
                     .cornerRadius(8)
                 }
+                .buttonStyle(PlainButtonStyle())
             }
         }
         .padding()

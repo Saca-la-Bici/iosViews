@@ -104,6 +104,7 @@ struct ActivityCardView: View {
                 .background(isJoined ? Color.red : Color.yellow)
                 .cornerRadius(8)
             }
+            .buttonStyle(PlainButtonStyle())
         }
         .padding()
         .background(Color.white)

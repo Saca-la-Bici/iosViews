@@ -18,7 +18,7 @@ struct ContentView: View {
                     if selectedTab == 0 {
                         ActividadesView()
                     } else if selectedTab == 1 {
-                        Text("Mapa")
+                        ActividadIndividualView()
                     } else if selectedTab == 2 {
                         consultarAnuncio()
                     } else {

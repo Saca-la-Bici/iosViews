@@ -24,6 +24,7 @@ struct ConfigurationView: View {
                     .bold()
                 Spacer()
             }
+            .buttonStyle(PlainButtonStyle())
             .padding(.vertical)
 
 
@@ -118,6 +119,7 @@ struct BotonSeccion: View {
                         .scaleEffect(1.5)
                 }
             }
+            .buttonStyle(PlainButtonStyle())
         }
         .padding(.vertical, 4)
     }
