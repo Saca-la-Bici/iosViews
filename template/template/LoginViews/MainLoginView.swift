@@ -143,7 +143,7 @@ struct MainLoginView: View {
                     
                 }.padding(.horizontal, 20)
                 
-            }.zIndex(2)
+            }.zIndex(3)
             
             VStack {
                 Spacer()
@@ -151,7 +151,15 @@ struct MainLoginView: View {
                 RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 500)
                     .foregroundColor(Color(red: 0.961, green: 0.802, blue: 0.048))
-            }.zIndex(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+            }.zIndex(2)
+            
+            VStack {
+                Spacer()
+                
+                Rectangle()
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 25)
+                    .foregroundColor(Color(red: 0.961, green: 0.802, blue: 0.048))
+            }.zIndex(1)
             
         }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
             .background(Color(red: 0.925, green: 0.925, blue: 0.925))
