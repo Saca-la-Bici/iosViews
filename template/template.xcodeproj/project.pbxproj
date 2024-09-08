@@ -16,6 +16,7 @@
 		7BECF75F2C8E15A800C8FC3C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECF75E2C8E15A800C8FC3C /* LoginView.swift */; };
 		7BECF7612C8E317F00C8FC3C /* SignInStep1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECF7602C8E317F00C8FC3C /* SignInStep1View.swift */; };
 		7BECF7632C8E459000C8FC3C /* SignInStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECF7622C8E459000C8FC3C /* SignInStep2View.swift */; };
+		7BECF7652C8E48CE00C8FC3C /* PasswordRecoveryStep1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECF7642C8E48CE00C8FC3C /* PasswordRecoveryStep1View.swift */; };
 		AE88BAE22C89E8000076208C /* actividadesUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88BAE12C89E8000076208C /* actividadesUsuario.swift */; };
 		AE88BAE42C89EC2A0076208C /* rodadasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88BAE32C89EC2A0076208C /* rodadasView.swift */; };
 		AE88BAE62C89EC940076208C /* eventosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88BAE52C89EC940076208C /* eventosView.swift */; };
@@ -61,6 +62,7 @@
 		7BECF75E2C8E15A800C8FC3C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7BECF7602C8E317F00C8FC3C /* SignInStep1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInStep1View.swift; sourceTree = "<group>"; };
 		7BECF7622C8E459000C8FC3C /* SignInStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInStep2View.swift; sourceTree = "<group>"; };
+		7BECF7642C8E48CE00C8FC3C /* PasswordRecoveryStep1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRecoveryStep1View.swift; sourceTree = "<group>"; };
 		AE88BAE12C89E8000076208C /* actividadesUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = actividadesUsuario.swift; sourceTree = "<group>"; };
 		AE88BAE32C89EC2A0076208C /* rodadasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rodadasView.swift; sourceTree = "<group>"; };
 		AE88BAE52C89EC940076208C /* eventosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventosView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				7BECF75E2C8E15A800C8FC3C /* LoginView.swift */,
 				7BECF7602C8E317F00C8FC3C /* SignInStep1View.swift */,
 				7BECF7622C8E459000C8FC3C /* SignInStep2View.swift */,
+				7BECF7642C8E48CE00C8FC3C /* PasswordRecoveryStep1View.swift */,
 			);
 			path = LoginViews;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				7BECF7572C8D330500C8FC3C /* LoadingView.swift in Sources */,
 				AEB91D052C877B810012591B /* ContentView.swift in Sources */,
 				253EF8A22C8B7570003A6F2A /* ForoView.swift in Sources */,
+				7BECF7652C8E48CE00C8FC3C /* PasswordRecoveryStep1View.swift in Sources */,
 				AED11FB02C89106300A7CACF /* consultarAnuncio.swift in Sources */,
 				AE88BAE82C89ECA50076208C /* talleresView.swift in Sources */,
 				7BECF7612C8E317F00C8FC3C /* SignInStep1View.swift in Sources */,
