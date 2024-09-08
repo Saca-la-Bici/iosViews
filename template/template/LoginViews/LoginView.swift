@@ -49,6 +49,7 @@ struct LoginView: View {
                         Text("Correo electrónico o usuario")
                             .font(.caption)
                         TextField("Correo electrónico o usuario", text: $email)
+                            .keyboardType(.emailAddress)
                             .textInputAutocapitalization(.never)
                             .padding()
                             .cornerRadius(10)
