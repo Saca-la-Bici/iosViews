@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     // States
-    @State var email: String = ""
+    @State var emailOrUsername: String = ""
     @State var password: String = ""
     @State var isPasswordVisible: Bool = false
     
@@ -48,7 +48,7 @@ struct LoginView: View {
                     VStack(alignment: .leading) {
                         Text("Correo electrónico o usuario")
                             .font(.caption)
-                        TextField("Correo electrónico o usuario", text: $email)
+                        TextField("Correo electrónico o usuario", text: $emailOrUsername)
                             .keyboardType(.emailAddress)
                             .textInputAutocapitalization(.never)
                             .padding()
