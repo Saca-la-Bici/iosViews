@@ -86,6 +86,7 @@ struct AnadirAnuncioView: View {
             .padding(.bottom, 20)
 
             // Campo de texto para la descripción
+            // No supe como ponerle un placeholder
             VStack(alignment: .leading) {
                 Text("Descripción")
                     .font(.subheadline)
@@ -95,7 +96,7 @@ struct AnadirAnuncioView: View {
                     .frame(height: 150)
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.gray.opacity(0.5), lineWidth: 1) // Borde con grosor
+                            .stroke(Color.gray.opacity(0.5), lineWidth: 1)
                     )
                     .padding(.top, 5)
             }
@@ -103,9 +104,8 @@ struct AnadirAnuncioView: View {
 
             Spacer()
 
-            // Aquí iría tu CustomFooterView si es necesario
         }
-        .padding(.bottom, 20)  // Ajuste para que el contenido no esté pegado a la barra inferior
+        .padding(.bottom, 20)
     }
 }
 
