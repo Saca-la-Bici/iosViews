@@ -86,7 +86,6 @@ struct AnadirAnuncioView: View {
             .padding(.bottom, 20)
 
             // Campo de texto para la descripción
-            // No supe como ponerle un placeholder
             VStack(alignment: .leading) {
                         Text("Descripción")
                             .font(.subheadline)
