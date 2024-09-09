@@ -88,19 +88,30 @@ struct AnadirAnuncioView: View {
             // Campo de texto para la descripción
             // No supe como ponerle un placeholder
             VStack(alignment: .leading) {
-                Text("Descripción")
-                    .font(.subheadline)
-                    .foregroundColor(.black)
+                        Text("Descripción")
+                            .font(.subheadline)
+                            .foregroundColor(.black)
 
-                TextEditor(text: $descripcion)
-                    .frame(height: 150)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.gray.opacity(0.5), lineWidth: 1)
-                    )
-                    .padding(.top, 5)
-            }
-            .padding(.horizontal)
+                        ZStack(alignment: .topLeading) {
+                            if descripcion.isEmpty {
+                                Text("¿Qué quieres compartir?")
+                                    .foregroundColor(Color(.placeholderText))
+                                    .padding(.horizontal, 5)
+                                    .padding(.vertical, 12)
+                            }
+                            TextEditor(text: $descripcion)
+                                .frame(height: 150)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(Color.gray.opacity(0.5), lineWidth: 1)
+                                )
+                                .padding(.top, 5)
+                        }
+                    }
+                    .padding(.horizontal)
+                    .onAppear {
+                        UITextView.appearance().backgroundColor = .clear
+                    }
 
             Spacer()
 

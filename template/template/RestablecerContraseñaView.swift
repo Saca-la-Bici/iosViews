@@ -49,16 +49,6 @@ struct RestablecerContrasenaView: View {
             }
             .padding(.vertical)
             .padding(.top, 50)
-            
-            HStack(spacing: 8) {
-                Image(systemName: "calendar")
-                    .font(.system(size: 30))
-                    .foregroundColor(.black)
-                
-                Spacer()
-            }
-            .padding(.leading, 30)
-            .padding(.bottom, 20)
 
             // Campo de Contraseña Actual
             passwordField(title: "Contraseña actual", text: $currentPassword, showPassword: $showCurrentPassword)
