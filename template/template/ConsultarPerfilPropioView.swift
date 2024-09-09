@@ -87,7 +87,7 @@ struct ConsultarPerfilPropioView: View {
                         .foregroundColor(.black)
                         .padding(.horizontal, 20)
                         .padding(.vertical, 10)
-                        .background(Color(UIColor.systemGray6))
+                        .background(Color(hex: "#f4f0ea"))
                         .cornerRadius(10)
                 }
                 Button(action: {
@@ -98,7 +98,7 @@ struct ConsultarPerfilPropioView: View {
                         .foregroundColor(.black)
                         .padding(.horizontal, 20)
                         .padding(.vertical, 10)
-                        .background(Color(UIColor.systemGray6))
+                        .background(Color(hex: "#f4f0ea"))
                         .cornerRadius(10)
                 }
 
@@ -109,12 +109,11 @@ struct ConsultarPerfilPropioView: View {
                         .font(.system(size: 12))
                         .foregroundColor(.black)
                         .padding(12)
-                        .background(Color(UIColor.systemGray6))
+                        .background(Color(hex: "#f4f0ea"))
                         .cornerRadius(10)
                 }
             }
-            .padding(.top, 6)
-            .padding(.bottom, 10)
+            .padding()
 
             VStack {
                         // Parte superior con iconos
