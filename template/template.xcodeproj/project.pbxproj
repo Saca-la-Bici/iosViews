@@ -32,7 +32,6 @@
 		AE88BAEE2C8A06C40076208C /* activityCardAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88BAED2C8A06C40076208C /* activityCardAdminView.swift */; };
 		AEB91D032C877B810012591B /* templateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D022C877B810012591B /* templateApp.swift */; };
 		AEB91D052C877B810012591B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D042C877B810012591B /* ContentView.swift */; };
-		AEB91D072C877B810012591B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D062C877B810012591B /* Item.swift */; };
 		AEB91D092C877B830012591B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB91D082C877B830012591B /* Assets.xcassets */; };
 		AEB91D0C2C877B830012591B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB91D0B2C877B830012591B /* Preview Assets.xcassets */; };
 		AEB91D162C877B830012591B /* templateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D152C877B830012591B /* templateTests.swift */; };
@@ -354,10 +353,8 @@
 				AED11FB02C89106300A7CACF /* consultarAnuncio.swift in Sources */,
 				AE88BAE82C89ECA50076208C /* talleresView.swift in Sources */,
 				6D85EA6C2C8E086A00E7934D /* AnadirAnuncioView.swift in Sources */,
-				AEB91D072C877B810012591B /* Item.swift in Sources */,
 				6D85EA722C8E448600E7934D /* ConsultarUsuariosView.swift in Sources */,
 				7BECF7612C8E317F00C8FC3C /* SignInStep1View.swift in Sources */,
-				AEB91D072C877B810012591B /* Item.swift in Sources */,
 				7BECF75D2C8E148000C8FC3C /* MainLoginView.swift in Sources */,
 				7BECF7672C8E4C3200C8FC3C /* PasswordRecoveryStep2View.swift in Sources */,
 				7BECF75F2C8E15A800C8FC3C /* LoginView.swift in Sources */,
