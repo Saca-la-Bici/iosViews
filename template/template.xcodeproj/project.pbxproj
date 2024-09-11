@@ -38,7 +38,6 @@
 		AE88BAEE2C8A06C40076208C /* activityCardAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE88BAED2C8A06C40076208C /* activityCardAdminView.swift */; };
 		AEB91D032C877B810012591B /* templateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D022C877B810012591B /* templateApp.swift */; };
 		AEB91D052C877B810012591B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D042C877B810012591B /* ContentView.swift */; };
-		AEB91D072C877B810012591B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D062C877B810012591B /* Item.swift */; };
 		AEB91D092C877B830012591B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB91D082C877B830012591B /* Assets.xcassets */; };
 		AEB91D0C2C877B830012591B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB91D0B2C877B830012591B /* Preview Assets.xcassets */; };
 		AEB91D162C877B830012591B /* templateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB91D152C877B830012591B /* templateTests.swift */; };
