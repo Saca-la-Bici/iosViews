@@ -12,9 +12,38 @@ jobs:
     runs-on: macos-latest
 
     steps:
+      # Checkout repository
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Set up certificates and provisioning profiles
+      - name: Set up signing certificates and profiles
+        run: |
+          echo "$APPLE_DEVELOPER_CERTIFICATE" | base64 --decode > certificate.p12
+          echo "$APPLE_MOBILEPROVISION" | base64 --decode > profile.mobileprovision
+        env:
+          APPLE_DEVELOPER_CERTIFICATE: ${{ secrets.APPLE_DEVELOPER_CERTIFICATE }}
+          APPLE_MOBILEPROVISION: ${{ secrets.APPLE_MOBILEPROVISION }}
+
+      # Install the certificate into the keychain
+      - name: Install certificate
+        run: |
+          security create-keychain -p "" build.keychain
+          security import certificate.p12 -t agg -k ~/Library/Keychains/build.keychain -P "$CERTIFICATE_PASSWORD" -A
+          security list-keychains -s ~/Library/Keychains/build.keychain
+          security default-keychain -s ~/Library/Keychains/build.keychain
+          security unlock-keychain -p "" ~/Library/Keychains/build.keychain
+          security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
+        env:
+          CERTIFICATE_PASSWORD: ${{ secrets.CERTIFICATE_PASSWORD }}
+
+      # Install the provisioning profile
+      - name: Install provisioning profile
+        run: |
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          mv profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
+
+      # Set Default Scheme
       - name: Set Default Scheme
         run: |
           scheme_list=$(xcodebuild -list -project template/template.xcodeproj -json | tr -d "\n")
@@ -22,6 +51,7 @@ jobs:
           echo $default | cat >default
           echo Using default scheme: $default
 
+      # Build the app
       - name: Build
         env:
           scheme: ${{ 'default' }}
@@ -31,6 +61,7 @@ jobs:
           if [ $scheme = default ]; then scheme=$(cat default); fi
           xcodebuild build-for-testing -scheme "$scheme" -project template/template.xcodeproj -destination "platform=$platform,name=$device" -allowProvisioningUpdates
 
+      # Run the tests
       - name: Test
         env:
           scheme: ${{ 'default' }}
