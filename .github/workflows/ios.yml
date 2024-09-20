@@ -1,3 +1,4 @@
+
 name: iOS starter workflow
 
 on:
@@ -12,6 +13,9 @@ jobs:
     runs-on: macos-latest
 
     steps:
+      - name: Select Xcode Version
+        run: sudo xcode-select -switch /Applications/Xcode_16.app
+        
       # Checkout repository
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,31 +46,28 @@ jobs:
         run: |
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           mv profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
-
       # Set Default Scheme
       - name: Set Default Scheme
         run: |
-          scheme_list=$(xcodebuild -list -project template/template.xcodeproj -json | tr -d "\n")
+          scheme_list=$(xcodebuild -list -project "Saca la Bici.xcodeproj" -json | tr -d "\n")
           default=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][0]")
           echo $default | cat >default
           echo Using default scheme: $default
-
       # Build the app
       - name: Build
         env:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
         run: |
-          device=$(xcrun simctl list devices available | grep -oE 'iPhone [^ ]+' | head -1)
+          device=$(xcrun simctl list devices available | grep -oE 'iPhone 14' | head -1)
           if [ $scheme = default ]; then scheme=$(cat default); fi
-          xcodebuild build-for-testing -scheme "$scheme" -project template/template.xcodeproj -destination "platform=$platform,name=$device" -allowProvisioningUpdates
-
+          xcodebuild build-for-testing -scheme "$scheme" -project "Saca la Bici.xcodeproj" -destination "platform=$platform,name=$device" -allowProvisioningUpdates
       # Run the tests
       - name: Test
         env:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
         run: |
-          device=$(xcrun simctl list devices available | grep -oE 'iPhone [^ ]+' | head -1)
+          device=$(xcrun simctl list devices available | grep -oE 'iPhone 14' | head -1)
           if [ $scheme = default ]; then scheme=$(cat default); fi
-          xcodebuild test-without-building -scheme "$scheme" -project template/template.xcodeproj -destination "platform=$platform,name=$device" -allowProvisioningUpdates
+          xcodebuild test-without-building -scheme "$scheme" -project "Saca la Bici.xcodeproj" -destination "platform=$platform,name=$device" -allowProvisioningUpdates
