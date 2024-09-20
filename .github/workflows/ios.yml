@@ -2,7 +2,7 @@ name: iOS starter workflow
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "Jesus0204-patch-1" ]
   pull_request:
     branches: [ "main" ]
 
